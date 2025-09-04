@@ -206,3 +206,12 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 Drafts/pydantic.ipynb
+
+/tests
+/.github
+/app
+
+Dockerfile
+requirements.txt
+token.pickle
+test1.py
