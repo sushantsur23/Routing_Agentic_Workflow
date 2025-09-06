@@ -31,9 +31,9 @@ mkdir -p app/utils
 touch app/utils/__init__.py
 touch app/utils/helpers.py
 
-mkdir -p app/workers
-touch app/workers/__init__.py
-touch app/workers/campaign_graph.py
+mkdir -p app/workflows
+touch app/workflows/__init__.py
+touch app/workflows/campaign_graph.py
 
 touch app/__init__.py
 touch app/mainapp.py
