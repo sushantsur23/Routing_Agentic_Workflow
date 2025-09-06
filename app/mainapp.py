@@ -1,5 +1,4 @@
 # Streamlit entry point
-
 import os, re
 import streamlit as st
 from dotenv import load_dotenv
@@ -7,8 +6,7 @@ from app.workflows.campaign_graph import *
 from app.services.gmail_service import save_draft
 from app.utils.helpers import *
 from app.graphs.save_graphs import *
-from PIL import Image
-import io
+
 
 load_dotenv()
 
