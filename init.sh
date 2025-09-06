@@ -37,6 +37,8 @@ touch app/workflows/campaign_graph.py
 
 touch app/__init__.py
 touch app/mainapp.py
+touch .env
+touch Dockerfile
 
 # 4. Create requirements.txt if not exists & add libraries
 if [ ! -f "requirements.txt" ]; then
