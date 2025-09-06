@@ -7,8 +7,10 @@ emoji: 🤖
 colorFrom: blue
 colorTo: purple
 sdk: streamlit
-sdk_version: "1.37.0"
+sdk_version: "1.42.0"
 app_file: app/mainapp.py
-pinned: true
+pinned: false
+license: apache-2.0
+short_description: ROUting Agentic AI Workflow
 
 ---
