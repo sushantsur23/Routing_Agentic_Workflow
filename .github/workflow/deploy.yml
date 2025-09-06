@@ -18,10 +18,6 @@ jobs:
           fetch-depth: 0
           lfs: false
 
-      - name: Remove large files (if any)
-        run: |
-          git filter-repo --invert-paths --path Rag_Documents/layout-parser-paper.pdf || true
-
       - name: Login to Hugging Face
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
