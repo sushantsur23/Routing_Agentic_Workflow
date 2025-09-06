@@ -1,0 +1,14 @@
+langchain
+python-dotenv
+langchain_huggingface
+langchain-tavily
+reportlab
+google-api-python-client
+google_auth_oauthlib
+langchain-openai
+streamlit
+langchain-groq
+pytest
+langgraph
+# pytest-playwright
+# playwright
