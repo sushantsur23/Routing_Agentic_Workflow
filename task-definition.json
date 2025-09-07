@@ -1,15 +1,25 @@
 {
-    "compatibilities": [
-        "EC2",
-        "FARGATE"
-    ],
+    "taskDefinitionArn": "arn:aws:ecs:eu-north-1:315344333990:task-definition/Agentic-routing:1",
     "containerDefinitions": [
         {
+            "name": "routing",
+            "image": "315344333990.dkr.ecr.eu-north-1.amazonaws.com/routing:latest",
             "cpu": 0,
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp",
+                    "name": "8000",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
             "environment": [],
             "environmentFiles": [],
-            "essential": true,
-            "image": "315344333990.dkr.ecr.eu-north-1.amazonaws.com/routing:latest",
+            "mountPoints": [],
+            "volumesFrom": [],
+            "ulimits": [],
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
@@ -20,31 +30,15 @@
                 },
                 "secretOptions": []
             },
-            "mountPoints": [],
-            "name": "routing",
-            "portMappings": [
-                {
-                    "appProtocol": "http",
-                    "containerPort": 80,
-                    "hostPort": 80,
-                    "name": "8000",
-                    "protocol": "tcp"
-                }
-            ],
-            "systemControls": [],
-            "ulimits": [],
-            "volumesFrom": []
+            "systemControls": []
         }
     ],
-    "cpu": "1024",
-    "enableFaultInjection": false,
-    "executionRoleArn": "arn:aws:iam::315344333990:role/ecsTaskExecutionRole",
     "family": "Agentic-routing",
-    "memory": "3072",
+    "executionRoleArn": "arn:aws:iam::315344333990:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "placementConstraints": [],
-    "registeredAt": "2025-09-07T12:10:34.827Z",
-    "registeredBy": "arn:aws:iam::315344333990:root",
+    "revision": 1,
+    "volumes": [],
+    "status": "ACTIVE",
     "requiresAttributes": [
         {
             "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
@@ -71,16 +65,21 @@
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
         }
     ],
-    "requiresCompatibilities": [
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
         "FARGATE"
     ],
-    "revision": 1,
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "status": "ACTIVE",
-    "taskDefinitionArn": "arn:aws:ecs:eu-north-1:315344333990:task-definition/Agentic-routing:1",
-    "volumes": [],
-    "tags": []
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "3072",
+    "registeredAt": "2025-09-07T17:40:34.827000+05:30",
+    "registeredBy": "arn:aws:iam::315344333990:root",
+    "enableFaultInjection": false
 }

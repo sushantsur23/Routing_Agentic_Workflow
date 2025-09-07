@@ -35,6 +35,7 @@ env:
   ECR_REPOSITORY: routing # set this to your Amazon ECR repository name
   ECS_SERVICE: agentic-routing # set this to your Amazon ECS service name
   ECS_CLUSTER: spotless-bat-fwo75v # set this to your Amazon ECS cluster name
+  CONTAINER_NAME:
 
 permissions:
   contents: read
