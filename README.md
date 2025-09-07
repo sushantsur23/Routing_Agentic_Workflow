@@ -54,7 +54,7 @@ This Hugging Face Space demonstrates how to build and deploy an **AI-powered cam
 - 🎨 Built with **Streamlit** for an interactive UI.
 
 ## 📂 Project Structure
-[Project structure explained in brief](/graphs/project_structure.png)
+[Project structure explained in brief](graphs/project_structure.png)
 
 ## 🔑 Environment Variables
 
