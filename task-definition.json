@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:eu-north-1:315344333990:task-definition/Agentic-routing:1",
+    "taskDefinitionArn": "arn:aws:ecs:eu-north-1:315344333990:task-definition/agentic-routing:1",
     "containerDefinitions": [
         {
             "name": "routing",
@@ -10,12 +10,31 @@
                     "containerPort": 80,
                     "hostPort": 80,
                     "protocol": "tcp",
-                    "name": "8000",
+                    "name": "routing-80-tcp",
                     "appProtocol": "http"
+                },
+                {
+                    "containerPort": 8051,
+                    "hostPort": 8051,
+                    "protocol": "tcp",
+                    "name": "routing-8051-tcp"
                 }
             ],
             "essential": true,
-            "environment": [],
+            "environment": [
+                {
+                    "name": "GROQ_API_KEY",
+                    "value": "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"
+                },
+                {
+                    "name": "TAVILY_API_KEY",
+                    "value": "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"
+                },
+                {
+                    "name": "OPENAI_API_KEY",
+                    "value": "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"
+                }
+            ],
             "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": [],
@@ -23,7 +42,7 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/Agentic-routing",
+                    "awslogs-group": "/ecs/agentic-routing",
                     "awslogs-create-group": "true",
                     "awslogs-region": "eu-north-1",
                     "awslogs-stream-prefix": "ecs"
@@ -33,7 +52,7 @@
             "systemControls": []
         }
     ],
-    "family": "Agentic-routing",
+    "family": "agentic-routing",
     "executionRoleArn": "arn:aws:iam::315344333990:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
@@ -79,7 +98,7 @@
     ],
     "cpu": "1024",
     "memory": "3072",
-    "registeredAt": "2025-09-07T17:40:34.827000+05:30",
+    "registeredAt": "2025-09-07T20:00:26.092000+05:30",
     "registeredBy": "arn:aws:iam::315344333990:root",
     "enableFaultInjection": false
 }
