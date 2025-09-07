@@ -14,6 +14,33 @@ license: apache-2.0
 short_description: ROUting Agentic AI Workflow
 
 ---
+
+## 📝 Problem Statement
+
+Marketing teams often struggle to **orchestrate, generate, and unify campaign assets** across multiple platforms.  
+Traditionally, this involves:
+- Drafting **email copy** separately.
+- Designing **social media ads** in isolation.
+- Creating **blog posts** without alignment.
+- Building **landing pages** with minimal integration.
+
+This fragmented process leads to:
+- 🔄 Duplicated effort.  
+- ⚡ Slow turnaround time.  
+- 🎯 Inconsistent brand messaging.  
+
+---
+
+### 💡 Our Solution: Marketing Campaign Generator
+
+This project introduces an **Agentic AI Workflow** for automated marketing campaign creation:
+
+- **Orchestrator** 🧑‍💼 → Defines deliverables (Email Copy, Social Media Ads, Blog Post, Landing Page).  
+- **Workers** ✍️ → Generate each asset individually using LLMs.  
+- **Synthesizer** 📦 → Bundles all assets into a cohesive campaign package.  
+
+✅ The result is a **faster, more consistent, and cost-efficient** way to generate complete marketing campaigns.
+
 # 🚀 Routing Agentic AI Workflow
 
 Welcome to the **Routing Agentic AI Workflow**!  
