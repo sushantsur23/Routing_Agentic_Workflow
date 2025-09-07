@@ -53,15 +53,8 @@ This Hugging Face Space demonstrates how to build and deploy an **AI-powered cam
 - ⚡ **Groq-powered LLMs** – optimized for high-speed inference.  
 - 🎨 Built with **Streamlit** for an interactive UI.
 
-app/
-├── mainapp.py # Streamlit entrypoint
-├── workflows/ # Campaign graph & routing logic
-├── llms/ # LLM client setup (Groq, etc.)
-├── utils/ # Helper functions
-├── services/ # Gmail auto draft saving functions
-├── grphs/ # saves the architecture of the agent flow in the menioned directory
-requirements.txt # Python dependencies
-Dockerfile # Container setup
+## 📂 Project Structure
+[Project structure explained in brief](graphs/project_structure.png)
 
 ## 🔑 Environment Variables
 
