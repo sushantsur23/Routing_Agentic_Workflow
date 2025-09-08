@@ -93,7 +93,7 @@ streamlit run app/mainapp.py --server.port=8000 --server.address=0.0.0.0
 - [LangChain](https://www.langchain.com/) + [LangGraph](https://www.langchain.com/langgraph)  
 - [Groq LLMs](https://groq.com/)  
 - [Tavily API](https://tavily.com/) (for search integration)  
-- Deployed via **Hugging Face Spaces (Docker)**  
+- Deployed via **AWS ECS and Fargate (Docker)**  
 
 ## 🔐 Additional Setup Notes
 
