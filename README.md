@@ -40,10 +40,10 @@ This ACS container aligned with AWS Fargate demonstrates how to build and deploy
 
 ## 🏗️ Architecture Flow
 
-![Architecture Flow](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png](https://github.com/sushantsur23/Routing_Agentic_workflow_Rev/blob/main/graphs/campaign_workflow.jpg))
+![Architecture Flow](https://github.com/sushantsur23/Routing_Agentic_workflow_Rev/blob/3cc1736ef2b79843da7e3491eb3d1a528991a9da/graphs/campaign_workflow.jpg)
 
 ## 📂 Project Structure
-![Project structure explained in brief]((https://github.com/sushantsur23/Routing_Agentic_workflow_Rev/blob/main/graphs/project_structure.png)
+![Project structure explained in brief](https://github.com/sushantsur23/Routing_Agentic_workflow_Rev/blob/3cc1736ef2b79843da7e3491eb3d1a528991a9da/graphs/project_structure.png)
 
 ## 🔑 Environment Variables
 
