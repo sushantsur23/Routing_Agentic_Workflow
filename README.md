@@ -37,6 +37,7 @@ This ACS container aligned with AWS Fargate demonstrates how to build and deploy
 - 🌐 **Web search integration** – leverages external data (via Tavily API or similar).  
 - ⚡ **Groq-powered LLMs** – optimized for high-speed inference.  
 - 🎨 Built with **Streamlit** for an interactive UI.
+- ☁️ Deployed on AWS ECS with Fargate – scalable, serverless container orchestration.
 
 ## 🏗️ Architecture Flow
 
