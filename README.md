@@ -29,7 +29,7 @@ This project introduces an **Agentic AI Workflow** for automated marketing campa
 # 🚀 Routing Agentic AI Workflow
 
 Welcome to the **Routing Agentic AI Workflow**!  
-This Hugging Face Space demonstrates how to build and deploy an **AI-powered campaign workflow generator** using **LangChain, LangGraph, and Groq LLMs**.  
+This ACS container aligned with AWS Fargate demonstrates how to build and deploy an **AI-powered campaign workflow generator** using **LangChain, LangGraph, and Groq LLMs**.  
 
 ## ✨ Features
 - 🔗 **Agentic workflow routing** – dynamically routes requests through different agents.  
@@ -90,13 +90,63 @@ streamlit run app/mainapp.py --server.port=8000 --server.address=0.0.0.0
 - [Tavily API](https://tavily.com/) (for search integration)  
 - Deployed via **Hugging Face Spaces (Docker)**  
 
-## 🙌 Acknowledgements
-Special thanks to the **LangChain** and **Hugging Face** teams for making open-source AI development accessible.  
+## 🔐 Additional Setup Notes
+
+### 1. Google Cloud Credentials
+To enable saving generated email copies as **Gmail drafts**, you must:
+- Download the `credentials.json` file from your **Google Cloud Console** (OAuth Client ID).
+- Place the file in your project root directory.
+- This allows the app to authenticate with **Google APIs** securely.
+
+⚠️ Never commit `credentials.json` to GitHub. Add it to `.gitignore`.
 
 ---
 
+### 2. VPN Requirements for AWS + Gmail Integration
+When running this project on AWS, you may need to configure **VPN settings**.  
+- This is required because Gmail APIs open a browser window for OAuth authentication.  
+- Without VPN configuration, AWS may block the browser-based login flow.  
+- Ensure your VPN is correctly set up so that the Gmail authentication screen can load and let you save drafts.
+
+---
+
+### 3. AWS ECS Task Definition
+When deploying to **Amazon ECS**, you must provide a `task-definition.json` file.  
+
+Steps:
+1. Create or update your ECS Task Definition in the AWS Console or via CLI.  
+2. Export it to your local project using:  
+   ```bash
+   aws ecs describe-task-definition \
+     --task-definition Agentic-routing \
+     --query taskDefinition > task-definition.json
+
+### 4. Application Load Balancer (ALB) for Fixed Endpoint
+
+By default, every time the ECS service or task is redeployed, the **public IP address** of the running container may change.  
+This can cause issues when you need a stable endpoint for accessing the app.
+
+✅ To solve this, you should attach an **Application Load Balancer (ALB)** in front of your ECS service:
+- The ALB provides a **fixed DNS name** that does not change across deployments.  
+- Incoming traffic is routed from the ALB to the ECS tasks automatically.  
+- This ensures that your application is always accessible at the same endpoint, even if containers restart or move between nodes.
+
+**Recommended Setup:**
+1. Create an **ALB** in your AWS account (EC2 → Load Balancers → Application Load Balancer).  
+2. Configure a **Target Group** for your ECS service.  
+3. Attach the ECS service to the ALB target group.  
+4. Update your DNS (if applicable) to point to the ALB endpoint.  
+
+With this setup:
+- The ALB URL (e.g., `http://my-app-alb-123456789.us-east-1.elb.amazonaws.com`) will remain constant.  
+- You won’t need to worry about changing IP addresses after each deployment.
+
+
+## 🙌 Acknowledgements
+Special thanks to the **LangChain** and **AWS** teams for making deployment accessible.  
+
+---
+
+
 🔥 Try it live right here on!  
-
-
-## 📂 Project Structure
 
