@@ -16,7 +16,7 @@ This fragmented process leads to:
 
 ---
 
-### 💡 Our Solution: Marketing Campaign Generator
+### 💡 My Solution: Marketing Campaign Generator
 
 This project introduces an **Agentic AI Workflow** for automated marketing campaign creation:
 
@@ -38,8 +38,12 @@ This ACS container aligned with AWS Fargate demonstrates how to build and deploy
 - ⚡ **Groq-powered LLMs** – optimized for high-speed inference.  
 - 🎨 Built with **Streamlit** for an interactive UI.
 
+## 🏗️ Architecture Flow
+
+![Architecture Flow](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png](https://github.com/sushantsur23/Routing_Agentic_workflow_Rev/blob/main/graphs/campaign_workflow.jpg))
+
 ## 📂 Project Structure
-[Project structure explained in brief](graphs/project_structure.png)
+![Project structure explained in brief]((https://github.com/sushantsur23/Routing_Agentic_workflow_Rev/blob/main/graphs/project_structure.png)
 
 ## 🔑 Environment Variables
 
