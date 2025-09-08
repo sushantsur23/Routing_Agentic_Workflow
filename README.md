@@ -131,21 +131,20 @@ Steps:
 By default, every time the ECS service or task is redeployed, the **public IP address** of the running container may change.  
 This can cause issues when you need a stable endpoint for accessing the app.
 
-✅ To solve this, you should attach an **Application Load Balancer (ALB)** in front of your ECS service:
+✅ To solve this, you should attach an **Application Load Balancer (ALB)** in front of your ECS Fargate service:
 - The ALB provides a **fixed DNS name** that does not change across deployments.  
 - Incoming traffic is routed from the ALB to the ECS tasks automatically.  
 - This ensures that your application is always accessible at the same endpoint, even if containers restart or move between nodes.
 
 **Recommended Setup:**
-1. Create an **ALB** in your AWS account (EC2 → Load Balancers → Application Load Balancer).  
-2. Configure a **Target Group** for your ECS service.  
+1. Create an **ALB** in your AWS account (ECS → Load Balancers → Application Load Balancer).  
+2. Configure a **Target Group** for your ECS Fargate service.  
 3. Attach the ECS service to the ALB target group.  
 4. Update your DNS (if applicable) to point to the ALB endpoint.  
 
 With this setup:
 - The ALB URL (e.g., `http://my-app-alb-123456789.us-east-1.elb.amazonaws.com`) will remain constant.  
 - You won’t need to worry about changing IP addresses after each deployment.
-
 
 ## 🙌 Acknowledgements
 Special thanks to the **LangChain** and **AWS** teams for making deployment accessible.  
